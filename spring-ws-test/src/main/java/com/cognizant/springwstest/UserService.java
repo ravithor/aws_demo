@@ -10,7 +10,7 @@ public class UserService {
 	UserRepository repository;
 	
 	public User findUser(int id) {
-		return repository.getById(id);
+		return repository.findById(id).get();
 	}
 	
 	public User addUser(User user) {
